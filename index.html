@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cafetería El Grano de Oro</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@300,400,700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    
+    <header>
+        <h1>El Grano de Oro</h1>
+        <nav>
+            <ul>
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#menu">Menú</a></li>
+                <li><a href="#reviews">Reseñas</a></li>
+                <li><a href="#about">Nosotros</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h2>El Arte de una Buena Taza</h2>
+            <p>Donde la pasión por el café se encuentra con el ambiente perfecto.</p>
+            <a href="#menu" class="button">Ver Menú Completo</a>
+        </section>
+
+        <section id="menu">
+            <h2>Nuestra Selección</h2>
+            <div class="menu-items">
+                
+                <div class="item-menu">
+                    <img src="img/capuchino.jpg" alt="Capuchino de la casa" class="product-img">
+                    <div class="product-details">
+                        <h3>Capuchino <span class="price">$4.50</span></h3>
+                        <p>Espresso, leche vaporizada, y una rica capa de espuma.</p>
+                    </div>
+                </div>
+                
+                <div class="item-menu">
+                    <img src="img/latte.jpg" alt="Latte Caramelo" class="product-img">
+                    <div class="product-details">
+                        <h3>Latte Caramelo <span class="price">$5.25</span></h3>
+                        <p>Clásico latte con jarabe de caramelo y crema batida.</p>
+                    </div>
+                </div>
+
+                <div class="item-menu">
+                    <img src="img/croissant.jpg" alt="Croissant de Almendras" class="product-img">
+                    <div class="product-details">
+                        <h3>Croissant de Almendras <span class="price">$3.75</span></h3>
+                        <p>Fresco y crujiente, horneado cada mañana.</p>
+                    </div>
+                </div>
+
+                <div class="item-menu">
+                    <img src="img/torta.jpg" alt="Torta de Chocolate" class="product-img">
+                    <div class="product-details">
+                        <h3>Torta de Chocolate <span class="price">$6.00</span></h3>
+                        <p>Porción generosa de nuestra receta especial de la casa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews">
+            <h2>Lo que Dicen Nuestros Clientes</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <p>"El mejor latte que he probado. El ambiente es muy tranquilo."</p>
+                    <p class="reviewer">- Ana G.</p>
+                </div>
+                <div class="review-card">
+                    <p>"El croissant de almendras es espectacular. Siempre vuelvo por más."</p>
+                    <p class="reviewer">- Carlos M.</p>
+                </div>
+                <div class="review-card">
+                    <p>"Un oasis en la ciudad. El personal es muy amable y el café delicioso."</p>
+                    <p class="reviewer">- Sofía R.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>Nuestra Historia</h2>
+            <p>
+                Fundada en 2024, El Grano de Oro nació del sueño de un amante del café. Seleccionamos granos de alta montaña de origen ético y los tostamos a la perfección aquí mismo. Nuestro objetivo es simple: ofrecer un lugar acogedor y la taza de café más memorable de la ciudad. ¡Te esperamos!
+            </p>
+        </section>
+        
+        <section id="contact">
+            <h2>Visítanos y Contáctanos</h2>
+            <div class="contact-container"> 
+                
+                <form action="REEMPLAZAR_CON_TU_ENLACE_DE_FORMSPREE" method="POST" class="contact-form">
+                    <input type="text" name="name" placeholder="Tu Nombre" required>
+                    <input type="email" name="_replyto" placeholder="Tu Correo Electrónico" required>
+                    <textarea name="message" rows="5" placeholder="Tu Mensaje" required></textarea>
+                    <button type="submit" class="button">Enviar Mensaje</button>
+                </form>
+
+                <div class="location-info">
+                    <p>📍 Dirección: Calle Falsa 123, Ciudad del Café</p>
+                    <p>📞 Teléfono: (555) 123-4567</p>
+                    <p>⏰ Horario: Lunes a Sábado, 8:00 AM - 8:00 PM</p>
+                    
+                    <h3 style="color: var(--color-primario); margin-top: 20px;">Nuestra Ubicación</h3>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15654.550137788176!2d-58.74087946950346!3d-34.45785084931346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc997d6d37f191%3A0x6b4c1065181b8970!2sDel%20Viso%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1700000000000!5m2!1ses!2sar" 
+                        width="100%" height="250" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 El Grano de Oro. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

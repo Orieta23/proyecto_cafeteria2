@@ -1,0 +1,22 @@
+# ---------------------------------------------------------------- #
+# Archivos de Visual Studio Code
+# ---------------------------------------------------------------- #
+.vscode/
+
+# Historial local (que a veces crea VS Code)
+.history/
+
+# ---------------------------------------------------------------- #
+# Archivos temporales de sistema operativo
+# ---------------------------------------------------------------- #
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# ---------------------------------------------------------------- #
+# Archivos/carpetas generados por Live Server o similares
+# ---------------------------------------------------------------- #
+# Live Server no suele generar archivos, pero es bueno ignorar logs
+*.log

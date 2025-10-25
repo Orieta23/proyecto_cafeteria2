@@ -1,0 +1,366 @@
+/* 1. RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+/* 2. VARIABLES Y TIPOGRAFÍA */
+:root {
+    /* Paleta de colores de cafetería */
+    --color-primario: #5A3921;   /* Marrón oscuro (café) */
+    --color-secundario: #D4A373; /* Tostado (crema de café) */
+    --color-fondo: #FAF3E0;      /* Blanco roto/crema claro */
+    --color-texto: #333333;      /* Gris oscuro para el cuerpo */
+    
+    /* Fuentes de Google Fonts */
+    --fuente-principal: 'Roboto', sans-serif; 
+    --fuente-titulo: 'Merriweather', serif; 
+}
+
+body {
+    font-family: var(--fuente-principal);
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    line-height: 1.6; 
+}
+
+a {
+    text-decoration: none; 
+    color: var(--color-primario);
+}
+
+ul {
+    list-style: none; 
+}
+
+.button {
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    background-color: #C89565; 
+    transform: translateY(-2px); 
+}
+
+/* -------------------------------------- */
+/* 3. ESTILOS DEL ENCABEZADO Y NAVEGACIÓN */
+/* -------------------------------------- */
+header {
+    /* 👉 REQUISITO: Estilos aplicados a header */
+    background-color: var(--color-primario);
+    color: white;
+    padding: 1rem 5%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-family: var(--fuente-titulo);
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+nav ul {
+    /* 👉 REQUISITO: Estilos aplicados a lista de navegación */
+    display: flex;
+    gap: 30px; 
+}
+
+nav a {
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 0;
+    transition: color 0.3s;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: var(--color-secundario); 
+}
+
+/* ----------------------------- */
+/* 4. ESTILOS DE LA SECCIÓN HERO */
+/* ----------------------------- */
+#hero {
+    /* RUTA CORREGIDA: background: url('img/fondo-cafeteria.jpg') */
+    background: url('img/fondo-cafeteria.jpg') no-repeat center center/cover; 
+    height: 85vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white; 
+    padding: 2rem;
+}
+
+#hero h2 {
+    font-family: var(--fuente-titulo);
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9); 
+}
+
+#hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* ------------------------------------ */
+/* 5. ESTILOS DE SECCIONES Y TÍTULOS */
+/* ------------------------------------ */
+section {
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+section:nth-child(even) {
+    background-color: #F3EFE9; /* Color de fondo para secciones alternas */
+}
+
+section h2 {
+    font-family: var(--fuente-titulo);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: var(--color-primario);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+section h2::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background-color: var(--color-secundario);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#about p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* ------------------------------------ */
+/* 6. ESTILOS ESPECÍFICOS DEL MENÚ (FLEXBOX) */
+/* ------------------------------------ */
+#menu .menu-items {
+    /* 👉 REQUISITO: Sección Productos con Flexbox */
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 30px;
+    margin-top: 3rem;
+}
+
+.item-menu {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 380px; /* Aumentamos el ancho para que la imagen quepa al lado del texto */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+    
+    /* ********** AJUSTES CLAVE PARA IMAGEN AL LADO DEL TEXTO ********** */
+    display: flex; /* Convierte la tarjeta en contenedor flexible */
+    align-items: flex-start; /* Alinea los elementos al inicio (arriba) */
+    gap: 15px; /* Espacio entre la imagen y el contenido de texto */
+    text-align: left; /* Asegura que el texto dentro esté alineado a la izquierda */
+    /* ******************************************************************* */
+}
+
+.item-menu:hover {
+    transform: scale(1.03); 
+}
+
+.item-menu .product-img {
+    /* ********** AJUSTES CLAVE PARA LA IMAGEN ********** */
+    width: 120px; /* Ancho fijo para la imagen */
+    height: 120px; /* Altura fija para que sea cuadrada */
+    object-fit: cover; 
+    border-radius: 8px;
+    flex-shrink: 0; /* Evita que la imagen se achique */
+    /* ************************************************* */
+}
+
+/* NUEVA REGLA: Contenedor para el texto del producto, le damos todo el espacio restante */
+.item-menu .product-details {
+    flex-grow: 1; 
+}
+
+
+.item-menu h3 {
+    color: var(--color-primario);
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-menu .price {
+    color: var(--color-secundario);
+    font-weight: bold;
+}
+
+.item-menu p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* ------------------------------------ */
+/* 7. ESTILOS DE RESEÑAS (GRID) */
+/* ------------------------------------ */
+#reviews .reviews-grid {
+    /* 👉 REQUISITO: Sección Reseñas con Grid */
+    display: grid;
+    /* Auto-fit y minmax para hacerlo responsivo */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+    margin-top: 3rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.review-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-left: 5px solid var(--color-secundario);
+}
+
+.review-card p {
+    font-style: italic;
+    margin-bottom: 15px;
+    color: var(--color-texto);
+}
+
+.reviewer {
+    font-weight: bold;
+    color: var(--color-primario);
+}
+
+/* ------------------------------------ */
+/* 8. ESTILOS DE CONTACTO Y FORMULARIO */
+/* ------------------------------------ */
+.contact-container {
+    /* Flexbox para desktop, será modificado en mobile con media query */
+    display: flex; 
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 1000px;
+    margin: 3rem auto 0;
+    text-align: left;
+    gap: 40px;
+}
+
+.contact-form, .location-info {
+    flex: 1; 
+    min-width: 300px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: var(--fuente-principal);
+    font-size: 1rem;
+}
+
+.contact-form button {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    /* Reutilizamos el estilo del botón general */
+    background-color: var(--color-secundario);
+    color: var(--color-primario);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form button:hover {
+    background-color: #C89565; 
+    transform: translateY(-2px); 
+}
+
+.location-info p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+/* ------------------------------------ */
+/* 9. ESTILOS DEL FOOTER */
+/* ------------------------------------ */
+footer {
+    /* 👉 REQUISITO: Estilos aplicados a footer */
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    text-align: center;
+    padding: 1.5rem 5%;
+    font-size: 0.9rem;
+}
+
+/* ------------------------------------ */
+/* 10. MEDIA QUERIES (DISEÑO RESPONSIVO) */
+/* ------------------------------------ */
+
+/* 👉 REQUISITO: Sección Contacto Responsiva (y adaptamos NAV) */
+@media (max-width: 768px) {
+    
+    /* Adaptación del Header y Nav a móvil */
+    header {
+        flex-direction: column;
+        padding: 1rem 5%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        padding-top: 15px;
+    }
+
+    /* Contacto pasa a ser apilado */
+    .contact-container {
+        flex-direction: column; 
+        gap: 20px;
+    }
+
+    /* Ajuste de padding y textos para pantallas más pequeñas */
+    section {
+        padding: 2rem 5%;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    #hero h2 {
+        font-size: 3rem;
+    }
+}
