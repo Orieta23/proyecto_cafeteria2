@@ -1,16 +1,16 @@
-/* 1. RESET BÁSICO */
+/* RESET BÁSICO */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
 }
 
-/* 2. VARIABLES Y TIPOGRAFÍA */
+/*VARIABLES Y TIPOGRAFÍA */
 :root {
     /* Paleta de colores de cafetería */
     --color-primario: #5A3921;   /* Marrón oscuro (café) */
     --color-secundario: #D4A373; /* Tostado (crema de café) */
-    --color-fondo: #FAF3E0;      /* Blanco roto/crema claro */
+    --color-fondo: #FAF3E0;      /* Blanco /crema claro */
     --color-texto: #333333;      /* Gris oscuro para el cuerpo */
     
     /* Fuentes de Google Fonts */
@@ -51,10 +51,10 @@ ul {
 }
 
 /* -------------------------------------- */
-/* 3. ESTILOS DEL ENCABEZADO Y NAVEGACIÓN */
+/* ESTILOS DEL ENCABEZADO Y NAVEGACIÓN */
 /* -------------------------------------- */
 header {
-    /* 👉 REQUISITO: Estilos aplicados a header */
+    /*REQUISITO: Estilos aplicados a header */
     background-color: var(--color-primario);
     color: white;
     padding: 1rem 5%; 
@@ -73,7 +73,7 @@ header h1 {
 }
 
 nav ul {
-    /* 👉 REQUISITO: Estilos aplicados a lista de navegación */
+    /* REQUISITO: Estilos aplicados a lista de navegación */
     display: flex;
     gap: 30px; 
 }
@@ -91,11 +91,16 @@ nav a:hover {
 }
 
 /* ----------------------------- */
-/* 4. ESTILOS DE LA SECCIÓN HERO */
+/* ESTILOS DE LA SECCIÓN HERO */
 /* ----------------------------- */
 #hero {
-    /* RUTA CORREGIDA: background: url('img/fondo-cafeteria.jpg') */
-    background: url('img/fondo-cafeteria.jpg') no-repeat center center/cover; 
+    
+    background-image:  url('img/granoscafe.jpeg');
+    
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 85vh; 
     display: flex;
     flex-direction: column;
@@ -111,6 +116,7 @@ nav a:hover {
     font-size: 4rem;
     margin-bottom: 0.5rem;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9); 
+    color: #e3c19a;
 }
 
 #hero p {
@@ -121,7 +127,7 @@ nav a:hover {
 }
 
 /* ------------------------------------ */
-/* 5. ESTILOS DE SECCIONES Y TÍTULOS */
+/* ESTILOS DE SECCIONES Y TÍTULOS */
 /* ------------------------------------ */
 section {
     padding: 4rem 5%;
@@ -159,10 +165,10 @@ section h2::after {
 }
 
 /* ------------------------------------ */
-/* 6. ESTILOS ESPECÍFICOS DEL MENÚ (FLEXBOX) */
+/* ESTILOS ESPECÍFICOS DEL MENÚ (FLEXBOX) */
 /* ------------------------------------ */
 #menu .menu-items {
-    /* 👉 REQUISITO: Sección Productos con Flexbox */
+    /* REQUISITO: Sección Productos con Flexbox */
     display: flex;
     flex-wrap: wrap; 
     justify-content: center;
@@ -179,10 +185,10 @@ section h2::after {
     transition: transform 0.3s;
     
     /* ********** AJUSTES CLAVE PARA IMAGEN AL LADO DEL TEXTO ********** */
-    display: flex; /* Convierte la tarjeta en contenedor flexible */
-    align-items: flex-start; /* Alinea los elementos al inicio (arriba) */
-    gap: 15px; /* Espacio entre la imagen y el contenido de texto */
-    text-align: left; /* Asegura que el texto dentro esté alineado a la izquierda */
+    display: flex; 
+    align-items: flex-start; 
+    gap: 15px; 
+    text-align: left; 
     /* ******************************************************************* */
 }
 
@@ -192,11 +198,11 @@ section h2::after {
 
 .item-menu .product-img {
     /* ********** AJUSTES CLAVE PARA LA IMAGEN ********** */
-    width: 120px; /* Ancho fijo para la imagen */
-    height: 120px; /* Altura fija para que sea cuadrada */
+    width: 120px; 
+    height: 120px; 
     object-fit: cover; 
     border-radius: 8px;
-    flex-shrink: 0; /* Evita que la imagen se achique */
+    flex-shrink: 0; 
     /* ************************************************* */
 }
 
@@ -225,10 +231,10 @@ section h2::after {
 }
 
 /* ------------------------------------ */
-/* 7. ESTILOS DE RESEÑAS (GRID) */
+/*ESTILOS DE RESEÑAS (GRID) */
 /* ------------------------------------ */
 #reviews .reviews-grid {
-    /* 👉 REQUISITO: Sección Reseñas con Grid */
+    /* REQUISITO: Sección Reseñas con Grid */
     display: grid;
     /* Auto-fit y minmax para hacerlo responsivo */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
@@ -260,7 +266,7 @@ section h2::after {
 }
 
 /* ------------------------------------ */
-/* 8. ESTILOS DE CONTACTO Y FORMULARIO */
+/* ESTILOS DE CONTACTO Y FORMULARIO */
 /* ------------------------------------ */
 .contact-container {
     /* Flexbox para desktop, será modificado en mobile con media query */
@@ -315,10 +321,10 @@ section h2::after {
 }
 
 /* ------------------------------------ */
-/* 9. ESTILOS DEL FOOTER */
+/* ESTILOS DEL FOOTER */
 /* ------------------------------------ */
 footer {
-    /* 👉 REQUISITO: Estilos aplicados a footer */
+    /* REQUISITO: Estilos aplicados a footer */
     background-color: var(--color-primario);
     color: var(--color-secundario);
     text-align: center;
@@ -327,10 +333,10 @@ footer {
 }
 
 /* ------------------------------------ */
-/* 10. MEDIA QUERIES (DISEÑO RESPONSIVO) */
+/* MEDIA QUERIES (DISEÑO RESPONSIVO) */
 /* ------------------------------------ */
 
-/* 👉 REQUISITO: Sección Contacto Responsiva (y adaptamos NAV) */
+/* REQUISITO: Sección Contacto Responsiva  */
 @media (max-width: 768px) {
     
     /* Adaptación del Header y Nav a móvil */

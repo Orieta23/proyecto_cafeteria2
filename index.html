@@ -34,43 +34,55 @@
             <a href="#menu" class="button">Ver Menú Completo</a>
         </section>
 
-        <section id="menu">
-            <h2>Nuestra Selección</h2>
-            <div class="menu-items">
-                
-                <div class="item-menu">
-                    <img src="img/capuchino.jpg" alt="Capuchino de la casa" class="product-img">
-                    <div class="product-details">
-                        <h3>Capuchino <span class="price">$4.50</span></h3>
-                        <p>Espresso, leche vaporizada, y una rica capa de espuma.</p>
-                    </div>
-                </div>
-                
-                <div class="item-menu">
-                    <img src="img/latte.jpg" alt="Latte Caramelo" class="product-img">
-                    <div class="product-details">
-                        <h3>Latte Caramelo <span class="price">$5.25</span></h3>
-                        <p>Clásico latte con jarabe de caramelo y crema batida.</p>
-                    </div>
-                </div>
-
-                <div class="item-menu">
-                    <img src="img/croissant.jpg" alt="Croissant de Almendras" class="product-img">
-                    <div class="product-details">
-                        <h3>Croissant de Almendras <span class="price">$3.75</span></h3>
-                        <p>Fresco y crujiente, horneado cada mañana.</p>
-                    </div>
-                </div>
-
-                <div class="item-menu">
-                    <img src="img/torta.jpg" alt="Torta de Chocolate" class="product-img">
-                    <div class="product-details">
-                        <h3>Torta de Chocolate <span class="price">$6.00</span></h3>
-                        <p>Porción generosa de nuestra receta especial de la casa.</p>
-                    </div>
+    <section id="menu">
+        <h2>Nuestra Selección</h2>
+        <div class="menu-items">
+            
+            <div class="item-menu">
+                <img src="img/capuchino.jpg" alt="Capuchino de la casa" class="product-img">
+                <div class="product-details">
+                    <h3>Capuchino <span class="price">$3400</span></h3>
+                    <p>Espresso, leche vaporizada, y una rica capa de espuma.</p>
+                    <button class="add-to-cart-btn" data-id="1" data-name="Capuchino" data-price="3400">Agregar al Pedido</button>
                 </div>
             </div>
-        </section>
+            
+            <div class="item-menu">
+                <img src="img/latte.jpg" alt="Latte Caramelo" class="product-img">
+                <div class="product-details">
+                    <h3>Latte Caramelo <span class="price">$4500</span></h3>
+                    <p>Clásico latte con jarabe de caramelo y crema batida.</p>
+                    <button class="add-to-cart-btn" data-id="2" data-name="Latte Caramelo" data-price="4500">Agregar al Pedido</button>
+                </div>
+            </div>
+
+            <div class="item-menu">
+                <img src="img/croissant.jpg" alt="Croissant de Almendras" class="product-img">
+                <div class="product-details">
+                    <h3>Croissant de Almendras <span class="price">$7000</span></h3>
+                    <p>Fresco y crujiente, horneado cada mañana.</p>
+                    <button class="add-to-cart-btn" data-id="3" data-name="Croissant de Almendras" data-price="7000">Agregar al Pedido</button>
+                </div>
+            </div>
+
+            <div class="item-menu">
+                <img src="img/torta.jpg" alt="Torta de Chocolate" class="product-img">
+                <div class="product-details">
+                    <h3>Torta de Chocolate <span class="price">$9200</span></h3>
+                    <p>Porción generosa de nuestra receta especial de la casa.</p>
+                    <button class="add-to-cart-btn" data-id="4" data-name="Torta de Chocolate" data-price="9200">Agregar al Pedido</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="order-summary" style="margin-top: 40px; padding: 20px; background-color: #f4f4f4; border-radius: 8px;">
+            <h3 style="color: #333;">Tu Pedido</h3>
+            <ul id="cart-list" style="list-style: none; padding: 0;">
+                <p style="color: #666;">El carrito está vacío.</p>
+            </ul>
+            <h4 style="color: #333; margin-top: 15px;">Total: $<span id="cart-total">0.00</span></h4>
+        </div>
+    </section>
 
         <section id="reviews">
             <h2>Lo que Dicen Nuestros Clientes</h2>
@@ -126,5 +138,6 @@
     <footer>
         <p>© 2024 El Grano de Oro. Todos los derechos reservados.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
